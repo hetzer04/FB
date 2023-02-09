@@ -14,4 +14,14 @@ body{
 canvas{
     border: 1px solid white;
     user-select: none;
+    position: relative;
+}
+#msg{
+    color: black;
+    position: absolute;
+    user-select: none;
+    text-align: center;
+    font-size: 64px;
+    opacity: 1;
+    transition-duration: 0.3s;
 }
