@@ -159,6 +159,8 @@ function Game() {
         isGame = false;
         score.score = 0;
         spead = 0;
+        document.getElementById("msg").textContent = "Game over";
+        document.getElementById("msg").style.opacity = "1";
     };
     pipeList.forEach(function(pipe) {
         if (((bird.y + bird.bird_src.height * 2 > pipe.y1) && 
@@ -168,6 +170,8 @@ function Game() {
             isGame = false;
             score.score = 0;
             spead = 0;
+            document.getElementById("msg").textContent = "Game over";
+            document.getElementById("msg").style.opacity = "1";
         }
     })
     pipeList.forEach(function(pipe) {
@@ -189,6 +193,7 @@ document.addEventListener("pointerdown", function(){
         pipeList.splice(0, pipeList.length);
         spead = 1;
         isGame = true;
+        document.getElementById("msg").style.opacity = "0";
     }
 });
 
